@@ -5,7 +5,7 @@ import App from './App'
 
 
 
-export async function renderApp() {
+function renderApp() {
   ReactDOM.render(
     <React.StrictMode>
       <App />
@@ -26,7 +26,7 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
-  console.log("mount subapp");
+  console.log("mount subapp", props);
   renderApp(props);
 }
 

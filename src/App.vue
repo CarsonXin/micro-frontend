@@ -10,23 +10,29 @@ import { KeepAlive } from 'vue'
 <template>
   <div class="flex-list padding-10">
     <RouterLink to="/helloWorld" class="link-item">
-      <div>helloWorld</div>
+      <div>Vue 3 Demo</div>
     </RouterLink>
     <RouterLink to="/dashboard" class="link-item">
-      <div>dashboard</div>
+      <div>父应用路由 - Dashboard</div>
     </RouterLink>
     <RouterLink to="/vue-app" class="link-item">
-      <div>Vue-App</div>
+      <div>Vue-3-App 子应用</div>
     </RouterLink>
-    <RouterLink to="/react-app" class="link-item">
-      <div>React-App</div>
+    <RouterLink to="/react-app-vite" class="link-item">
+      <div>React-App-Vite</div>
+    </RouterLink>
+    <RouterLink to="/vue-cli-app" class="link-item">
+      <div>vue 2子应用</div>
     </RouterLink>
   </div>
 
   <div class="router-view-container">
       <RouterView />
-      <div id="react-app-container"></div>
+      <div id="react-app-vite-container"></div>
+      <div id="vue-cli-app-container"></div>
       <div id="vue-app-container"></div>
+<!--    <iframe src="http://127.0.0.1:10011/" />-->
+
   </div>
 </template>
 
@@ -55,7 +61,21 @@ import { KeepAlive } from 'vue'
   align-items: center;
 }
 
+.link-item {
+  color: #42b983;
+}
+
 .link-item + .link-item {
   margin-left: 10px;
+}
+
+.link-item:link,
+.link-item:visited,
+.link-item:hover {
+  text-decoration: none;
+}
+
+.link-item:active {
+  color: red;
 }
 </style>
